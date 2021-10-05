@@ -1,13 +1,5 @@
 @tailwind base;
-
-/* @layer base {
-  a {
-    @apply text-purple-600;
-  }
-} */
-
 @tailwind components;
-
 @tailwind utilities;
 
 @layer utilities {
