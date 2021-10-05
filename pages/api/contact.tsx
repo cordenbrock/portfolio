@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export default function Contact(req, res) {
+export default async function Contact(req, res) {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -22,10 +22,12 @@ export default function Contact(req, res) {
     ${email}</p>`,
   };
 
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
-  });
+  try {
+    const emailRes = await transporter.sendMail({mailData})
+    console.log("Message Sent");
+  } catch (err) {
+    console.log(err);
+  }
 
   res.status(200).json(req.body);
 }
