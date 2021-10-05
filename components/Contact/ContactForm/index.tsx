@@ -34,7 +34,7 @@ const ContactForm = () => {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="max-w-4xl px-4 mx-auto h-72"
+        className="max-w-4xl px-4 mx-auto h-72 animate-fade-in-up"
       >
         <div className="flex flex-wrap mb-6 -mx-3">
           <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
