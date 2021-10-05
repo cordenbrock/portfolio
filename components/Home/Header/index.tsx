@@ -1,15 +1,17 @@
+import Typewriter from "@Home/Windup";
+
 const Header = () => {
   return (
     <div className="flex h-full">
       <div className="m-auto">
-        <h1 className="px-10 pb-4 text-black md:text-8xl black-outline font-outline">
+        <h1 className="px-4 py-4 text-4xl text-clear-black sm:text-7xl black-outline font-outline">
           Cory Nordenbrock
         </h1>
-        <div>
-          <h3 className="px-10 text-white duration-500 transform rotate-180 md:text-3xl lg:text-center">
-            &lt; &nbsp; Full Stack Lorem Ipsum &nbsp; / &gt;
-          </h3>
-        </div>
+        <h3 className="px-8 text-gray-300 md:text-3xl md:text-center">
+            <Typewriter />
+      <span className="animate-cursor">|</span>
+
+        </h3>
       </div>
     </div>
   );
