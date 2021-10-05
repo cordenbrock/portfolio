@@ -52,7 +52,7 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-
+              {/* left nav-links */}
               <div className="hidden w-1/3 sm:block">
                 <div className="flex space-x-3">
                   {navigation.map((item) => (
@@ -61,7 +61,7 @@ export default function Navbar() {
                         className={classNames(
                           item.current
                             ? "underline"
-                            : "text-white text-sm hover:text-purple-200 cursor-pointer",
+                            : "text-white text-sm duration-300 hover:text-purple-200 cursor-pointer",
                           "px-3 py-2 rounded-md font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -72,17 +72,17 @@ export default function Navbar() {
                   ))}
                 </div>
               </div>
-
+              {/* center nav-home */}
               <div className="mx-auto sm:w-1/3 sm:block">
                 <div className="flex items-center justify-center">
                   <Link href="/">
-                    <a className="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl hover:text-purple-200 hover:line-through text-shadow-md font-monoton">
+                    <a className="text-3xl text-white duration-1000 transform sm:text-4xl md:text-5xl lg:text-6xl hover:text-purple-200 hover:scale-105 text-shadow-md font-monoton">
                       &lt; &nbsp; C N &nbsp; / &gt;
                     </a>
                   </Link>
                 </div>
               </div>
-
+              {/* right nav-links */}
               <div className="hidden w-1/3 sm:block">
                 <div className="flex items-center justify-end space-x-6">
                   {navIcons.map((item) => (
@@ -94,7 +94,7 @@ export default function Navbar() {
                       className={classNames(
                         item.current
                           ? "underline"
-                          : "text-white hover:text-purple-200 cursor-pointer",
+                          : "text-white hover:text-purple-200 duration-200 cursor-pointer",
                         "px-3 py-2 rounded-md text-2xl font-medium"
                       )}
                       aria-current={item.current ? "page" : undefined}
