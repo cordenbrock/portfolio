@@ -1,14 +1,16 @@
-import React from "react";
-import Image from "next/image";
-import Navbar from "@components/Navbar";
+import Navbar from "@Formatting/Layout/Navbar";
+import { Footer } from "@Formatting/Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="fixed w-screen bg-cover bg-test1">
-      <div className="h-screen bg-black opacity-90">
-        <Navbar />
-        {children}
+    <>
+      <div className="fixed w-screen h-screen bg-cover bg-utah">
+        <div className="w-full h-full bg-black opacity-90">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
