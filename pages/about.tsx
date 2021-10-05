@@ -21,7 +21,7 @@ const About = () => {
             <hr className="w-1/3 m-8" />
           </div>
           {/* card */}
-          <div className="p-8 mx-auto border-2 bg-primary max-w-7xl rounded-xl">
+          <div className="p-8 mx-auto border-2 bg-primary max-w-7xl rounded-xl animate-fade-in-up">
             <div className="flex flex-wrap ">
               {/* row-1 */}
               <div className="w-full pl-3 mb-6 sm:pr-10 md:w-2/3 md:mb-0">

@@ -2,15 +2,17 @@ import Card from "@Portfolio/Card";
 
 export default function Portfolio() {
   return (
-    <main className="flex flex-col justify-center h-full mx-auto max-w-7xl">
-      <div className="flex items-center justify-center w-full">
-        <hr className="w-1/3 m-8" />
-        <h1 className="font-extrabold text-black text-7xl black-outline">
-          PORTFOLIO
-        </h1>
-        <hr className="w-1/3 m-8" />
+    <main className="flex flex-col items-center justify-center w-full h-full max-w-6xl px-8 mx-auto">
+      <div className="w-full transform translate-y-12">
+        <div className="flex items-center justify-center w-full mx-auto mb-8 animate-fade-in-down">
+          <hr className="w-1/3 m-8" />
+          <h1 className="text-lg font-extrabold text-black uppercase sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-8xl black-outline">
+            Portfolio
+          </h1>
+          <hr className="w-1/3 m-8" />
+        </div>
+        <Card />
       </div>
-      <Card />
     </main>
   );
 }

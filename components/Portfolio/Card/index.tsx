@@ -1,6 +1,6 @@
 const Card = () => {
   return (
-    <section className="px-4 mx-auto mb-12 sm:px-6">
+    <section className="px-4 mx-auto mb-12 sm:px-6 animate-fade-in-up">
         <div className="grid grid-cols-1 mt-6 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
           <div className="relative w-full h-64 overflow-hidden transition duration-300 ease-in-out bg-center bg-cover rounded-lg shadow-lg bg-m-u group hover:shadow-2xl">
             <div className="absolute inset-0 transition duration-300 ease-in-out bg-purple-100 bg-opacity-90 group-hover:opacity-10"></div>
