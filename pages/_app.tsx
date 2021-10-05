@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout from "@Formatting/Layout";
-import { Footer } from "@Formatting/Footer";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -14,7 +13,6 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-      <Footer />
     </>
   );
 }
