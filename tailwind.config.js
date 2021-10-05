@@ -21,6 +21,7 @@ module.exports = {
       },
       colors: {
         primary: "rgba(36,14,5,.25)",
+        secondary: "rgba(255,220,181,1)",
       },
       keyframes: {
         "fade-in-down": {
