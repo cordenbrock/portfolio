@@ -23,7 +23,7 @@ export default async function Contact(req, res) {
   };
 
   try {
-    const emailRes = await transporter.sendMail({mailData})
+    const emailRes = await transporter.sendMail(mailData);
     console.log("Message Sent");
   } catch (err) {
     console.log(err);
