@@ -1,10 +1,10 @@
-import Header from "@Home/Header";
+import Landing from "@Home/Landing";
 
 export default function Home() {
   return (
     <>
       <main className="flex items-center justify-center h-full">
-        <Header />
+        <Landing />
       </main>
     </>
   );
