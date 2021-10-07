@@ -13,7 +13,7 @@ const RewindButton = () => {
   return (
     <WindupChildren>
         <button
-          className="text-purple-300 duration-1000 ease-in-out transform hover:-translate-y-1"
+          className="text-purple-200 duration-1000 ease-in-out transform hover:-translate-y-1"
           onClick={rewind}
         >
           {text}
