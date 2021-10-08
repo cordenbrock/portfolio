@@ -46,7 +46,7 @@ const Card = ({ title, subtitle, origins, attributes }) => {
           </h3>
           <hr className="w-2/3 mb-4" />
           <div
-            className={`flex justify-end p-6 h-auto bg-black rounded-full border-white border-2 transform ease-in-out  duration-1000 hover:border-purple-200 cursor-pointer ${
+            className={`flex justify-end p-6 h-auto bg-clear-black backdrop-filter backdrop-blur-3xl rounded-full border-white border-2 transform ease-in-out  duration-1000 hover:border-purple-200 cursor-pointer ${
               !isBananaUp ? "rotate-180" : null
             }`}
             onClick={flip}
@@ -54,9 +54,9 @@ const Card = ({ title, subtitle, origins, attributes }) => {
             <Image
               src="/im-a-banana.png"
               alt="self-portrait"
-              width={200}
-              height={200}
-              className={`flex justify-end p-6 h-auto bg-black rounded-full border-white border-2 transform ease-in-out duration-1000 hover:border-purple-300 cursor-pointer animate-fade-in-up ${
+              width={175}
+              height={175}
+              className={`flex justify-end p-6 h-auto rounded-full border-white border-2 transform ease-in-out duration-1000 hover:border-purple-300 cursor-pointer animate-fade-in-up ${
                 !isBananaUp ? "rotate-180" : null
               }`}
             />
