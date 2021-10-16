@@ -1,5 +1,5 @@
 import Header from "@Formatting/Header";
-import Card from "@About/Card";
+import Card from "@About/AboutCard";
 
 type Content = {
   pageTitle: string;
@@ -29,17 +29,17 @@ const About = () => {
       and <strong>professional web-dev experience</strong> now under
       his belt.`,
       attributes: `
-      Has a knack for quickly picking up new skills and adapting to
-      new environments. Perceptive problem-solver. Detail-oriented.
-      Team-player. Communicates effectively. An endless well of
-      curiosity. Driven. And contrary to popular belief,
+      An endless well of
+      curiosity. Has a knack for quickly picking up new skills and adapting to
+      new environments. <strong>Perceptive problem-solver</strong>. Detail-oriented.
+      Communicates effectively. <strong>Team-player</strong>. Driven. And contrary to popular belief,
       <em>not actually a banana.</em>`,
     },
   };
 
   return (
-    <main className="flex flex-col items-center justify-center h-full max-w-6xl px-8 mx-auto">
-      <div className="h-24"></div>
+    <main className="flex flex-col items-center justify-center h-full max-w-6xl mx-auto">
+      <div className="h-24 backdrop-filter backdrop-blur"></div>
       <Header pageTitle={content.pageTitle} />
       <Card {...content.card} />
     </main>

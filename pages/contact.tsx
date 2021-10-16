@@ -11,8 +11,8 @@ const Contact = () => {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center h-full mx-auto">
-      <div className="h-24"></div>
+    <main className="flex flex-col items-center justify-center h-full max-w-6xl mx-auto">
+      <div className="h-24 backdrop-filter backdrop-blur"></div>
       <Header pageTitle={content.pageTitle} />
       <ContactForm />
     </main>
