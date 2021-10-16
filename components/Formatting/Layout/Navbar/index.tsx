@@ -36,7 +36,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="fixed w-screen bg-transparent backdrop-filter backdrop-blur-sm">
+    <Disclosure as="nav" className="fixed w-screen">
       {({ open }) => (
         <>
           <div className="px-2 mx-auto max-w-7xl sm:px-4">
