@@ -10,8 +10,12 @@ module.exports = {
     extend: {
       backgroundImage: {
         utah: "url('/utah.jpg')",
-        "m-u": "url('/m-u.png')",
+        cn: "url('/cn.png')",
+        "musica-universalis": "url('/musica-universalis.png')",
+        magic: "url('/magic.png')", 
         paro: "url('/paro.png')",
+        tapper: "url('/tapper.png')",
+        "parks-api": "url('/parks-api.png')",
         exchangerator: "url('/exchangerator.png')",
         "im-a-banana": "url('/Untitled.png')",
       },
@@ -22,6 +26,7 @@ module.exports = {
       colors: {
         primary: "rgba(36,14,5,.25)",
         secondary: "rgba(255,220,181,1)",
+        sepia: "rgb(112,66,20,1)"
       },
       keyframes: {
         "fade-in-down": {
@@ -77,10 +82,10 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in-down": "fade-in-down 0.5s ease-out",
-        "fade-out-down": "fade-out-down 0.5s ease-out",
-        "fade-in-up": "fade-in-up 0.5s ease-out",
-        "fade-out-up": "fade-out-up 0.5s ease-out",
+        "fade-in-down": "fade-in-down 1s ease-out",
+        "fade-out-down": "fade-out-down 1s ease-out",
+        "fade-in-up": "fade-in-up 1s ease-out",
+        "fade-out-up": "fade-out-up 1s ease-out",
         "cursor": "blink 1s linear infinite forwards",
       },
     },
