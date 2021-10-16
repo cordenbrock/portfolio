@@ -1,4 +1,4 @@
-import { useState } from "react";
+import Typewriter from "@Contact/Typewriter";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -34,7 +34,7 @@ const ContactForm = () => {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-5/6 max-w-4xl p-8 mx-auto border-2 rounded-lg animate-fade-in-up bg-primary"
+        className="w-5/6 max-w-4xl p-8 mx-auto border-2 rounded-lg bg-sepia bg-opacity-10 animate-fade-in-up backdrop-filter backdrop-blur-sm"
       >
         <div className="flex flex-wrap mb-4 -mx-3">
           <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
@@ -111,18 +111,18 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex items-center justify-between">
           <button
-            className="px-4 py-2 font-bold text-gray-900 bg-gray-400 rounded shadow flex-start hover:bg-gray-900 hover:text-gray-400 focus:shadow-outline focus:outline-none"
+            className="flex justify-start px-4 py-2 font-bold text-gray-900 bg-gray-400 rounded shadow flex-start hover:text-gray-400 hover:bg-gray-900 focus:text-gray-400 focus:bg-gray-900 focus:outline-none"
             type="submit"
           >
             Send
           </button>
-          {isSubmitSuccessful && !isDirty && (
-            <span className="py-2 pl-4 text-center text-green-600 flex-end">
-              Message Sent!
-            </span>
-          )}
+          <div className="flex justify-end">
+            {isSubmitSuccessful && !isDirty && (
+              <Typewriter />
+            )}
+          </div>
         </div>
       </form>
     </>
