@@ -1,10 +1,20 @@
 module.exports = {
-  purge: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./layout/**/*.{js,ts,jsx,tsx}",
-    "./helpers/**/*.{js,ts,jsx,tsx}",
-  ],
+  purge: {
+    content: [
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+      "./layout/**/*.{js,ts,jsx,tsx}",
+      "./helpers/**/*.{js,ts,jsx,tsx}",
+    ],
+    safelist: [
+      "bg-musica-universalis",
+      "bg-paro",
+      "bg-tapper",
+      "bg-parks-api",
+      "bg-exchangerator",
+      "bg-cn"
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -12,7 +22,7 @@ module.exports = {
         utah: "url('/utah.jpg')",
         cn: "url('/cn.png')",
         "musica-universalis": "url('/musica-universalis.png')",
-        magic: "url('/magic.png')", 
+        magic: "url('/magic.png')",
         paro: "url('/paro.png')",
         tapper: "url('/tapper.png')",
         "parks-api": "url('/parks-api.png')",
@@ -26,7 +36,7 @@ module.exports = {
       colors: {
         primary: "rgba(36,14,5,.25)",
         secondary: "rgba(255,220,181,1)",
-        sepia: "rgb(112,66,20,1)"
+        sepia: "rgb(112,66,20,1)",
       },
       keyframes: {
         "fade-in-down": {
@@ -86,7 +96,7 @@ module.exports = {
         "fade-out-down": "fade-out-down 1s ease-out",
         "fade-in-up": "fade-in-up 1s ease-out",
         "fade-out-up": "fade-out-up 1s ease-out",
-        "cursor": "blink 1s linear infinite forwards",
+        cursor: "blink 1s linear infinite forwards",
       },
     },
   },
