@@ -25,9 +25,9 @@ const RewindButton = () => {
 const Typewriter = () => {
   return (
     <WindupChildren>
-      <Pace getPace={(char) => (char === " " ? 600 : 100)}>
+      <Pace getPace={(char) => ((char === " " || char === "-") ? 600 : 100)}>
         <span className="text-gray-400">{" < "}</span>
-        <span className="text-white">{"Full Stack "}</span>
+        <span className="text-white">{"Full-stack "}</span>
         <RewindButton />
         <span className="text-gray-400">{" />"}</span>
       </Pace>
