@@ -18,13 +18,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths":{
-      "@About/*": ["components/About/*"],
-      "@Contact/*": ["components/Contact/*"],
-      "@Formatting/*": ["components/Formatting/*"],
-      "@Home/*": ["components/Home/*"],
-      "@Portfolio/*": ["components/Portfolio/*"],
+    "paths": {
+      "@About/*": [
+        "components/About/*"
+      ],
+      "@Contact/*": [
+        "components/Contact/*"
+      ],
+      "@Formatting/*": [
+        "components/Formatting/*"
+      ],
+      "@Home/*": [
+        "components/Home/*"
+      ],
+      "@Portfolio/*": [
+        "components/Portfolio/*"
+      ]
     },
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
