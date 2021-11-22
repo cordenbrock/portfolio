@@ -46,6 +46,8 @@ const App = () => {
                 width={260}
                 height={140}
                 className="rounded-lg shadow-md"
+                placeholder="blur"
+                blurDataURL={app.blurDataURL}
               />
             </a>
             <div className="flex w-full p-2 justify-evenly">
