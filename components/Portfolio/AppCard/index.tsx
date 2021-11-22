@@ -1,12 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const AppCard = ({ name, id, imgSelector }) => {
-
+const AppCard = ({ name, id, imageURL, blurDataURL }) => {
   return (
     <div
-      className={`relative w-full h-32 2xl:h-48 duration-300 ease-in-out bg-cover rounded transform hover:scale-105 hover:-translate-y-2
-        ${imgSelector}`}
+      className={
+        "relative w-full h-32 2xl:h-48 duration-300 ease-in-out bg-cover rounded transform hover:scale-105 hover:-translate-y-2"
+      }
     >
+      <Image
+        src={imageURL}
+        alt="app image"
+        layout="fill"
+        className="rounded-lg shadow-md"
+        placeholder="blur"
+        blurDataURL={blurDataURL}
+      />
       <Link href="/portfolio/[id]" as={`/portfolio/${id}`}>
         <a
           className="text-purple-200 cursor-pointer hover:text-purple-400 "
