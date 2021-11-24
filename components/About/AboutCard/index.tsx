@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import SelfPortrait from "../../../public/im-a-banana.png";
 
 const Card = ({ title, subtitle, origins, attributes }) => {
   const [isBananaUp, setIsBananaUp] = useState(true);
@@ -52,13 +53,14 @@ const Card = ({ title, subtitle, origins, attributes }) => {
             onClick={flip}
           >
             <Image
-              src="/im-a-banana.png"
+              src={SelfPortrait}
               alt="self-portrait"
               width={175}
               height={175}
               className={`transform ease-in-out duration-1000 ${
                 !isBananaUp ? "rotate-180" : null
               }`}
+              placeholder="blur"
             />
           </div>
           <hr className="w-2/3 mt-4" />
