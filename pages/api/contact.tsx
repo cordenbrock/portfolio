@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export default async function Contact(req, res) {
   const { name, email, message } = req.body;
@@ -7,8 +7,13 @@ export default async function Contact(req, res) {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
+      type: "OAuth2",
       user: process.env.NEXT_PUBLIC_USER,
-      pass: process.env.NEXT_PUBLIC_PASSWORD
+      accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
+      refreshToken: process.env.NEXT_PUBLIC_REFRESH_TOKEN,
+      expires: 3599,
+      clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+      clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
     },
     secure: true,
   });
@@ -17,16 +22,15 @@ export default async function Contact(req, res) {
     from: process.env.NEXT_PUBLIC_USER,
     to: `cordenbrock@gmail.com`,
     subject: `Contact form message from ${name}`,
-    text: message + " | Sent from: " + email,
-    html: `<div>${message}</div><p>Sent from:
-    ${email}</p>`,
+    text: `${message} | Sent from: ${email}`,
+    html: `<div>${message}</div><p>Sent from: ${email}</p>`,
   };
 
   try {
-    const emailRes = await transporter.sendMail(mailData);
-    console.log("Message Sent");
+    await transporter.sendMail(mailData);
+    console.log("success");
   } catch (err) {
-    console.log(err);
+    return res.status(500).json({ error: err.message || err.toString() });
   }
 
   res.status(200).json(req.body);
